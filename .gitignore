@@ -13,3 +13,5 @@ hs_err_pid*
 /dlc.commons/build/
 /DLC/DLC-ejb/dist/
 /DLC/DLC-war/dist/
+/dlc.commons/dist/
+/DLCtest2/dist/

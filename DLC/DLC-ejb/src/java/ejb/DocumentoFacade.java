@@ -23,7 +23,7 @@ import javax.inject.Inject;
 public class DocumentoFacade implements DocumentoFacadeRemote {
 
     @Inject
-    DocumentoDao docDao;
+    private DocumentoDao docDao;
 
 
 
@@ -38,7 +38,10 @@ public class DocumentoFacade implements DocumentoFacadeRemote {
 
     @Override
     public List<DocumentoBean> listarDocumentos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<DocumentosEntity> entidades = docDao.findAll();
+        LinkedList<DocumentoBean> beans = new LinkedList<>();
+        entitiesToBeans(entidades, beans);
+        return beans;
     }
 
    
